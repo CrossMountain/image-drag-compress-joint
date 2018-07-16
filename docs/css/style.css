@@ -1,0 +1,60 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+#drop{
+    width:200px;
+    height: 200px;
+    border: 1px solid black;
+}
+#input{
+    display: none;
+}
+
+/*You can style the new button for opening the file picker as you wish.*/
+#button{
+   
+}
+
+#img-wrap{
+    display: flex;
+}
+
+.img-content{
+    position: relative;
+}
+.upload-info{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: inherit;
+    color:white;
+    text-align: center;
+}
+
+.upload-info .upload-success,
+.upload-info .upload-failed,
+.upload-info .upload-progress{
+    display: none;
+    width: 100%;
+}
+
+.img-content [data-status="hidden"]{
+    display: none
+}
+.img-content [data-status="uploading"],
+.img-content [data-status="success"],
+.img-content [data-status="failed"],{
+    display: block;
+}
+
+.img-content [data-status="uploading"] .upload-progress{
+    display: block;
+}
+.img-content [data-status="success"] .upload-success{
+    display: block;
+}
+.img-content [data-status="failed"] .upload-failed{
+    display: block;
+}
